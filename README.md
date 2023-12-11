@@ -1,4 +1,6 @@
 ## Here I downgrade python version and switch the multiple version of python
+#### To check python version `python3 -V`
+
 I'm using python3.11.6 now i want switch 3.10.11
 #### Make a directory python file which you want downgrade 
 `mkdir ~/python-source-files`
