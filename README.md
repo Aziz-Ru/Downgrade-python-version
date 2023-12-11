@@ -17,7 +17,7 @@ tar xvzf Python-3.10.11.tgz
 `cd Python-3.10.11/` and configure optimization `./configure --enable-optimizations`
 and run this command for alternative install `sudo make altinstall`
 
- After alternative install now check how many python version available to see that 
+ After alternative install now check how many python version available in your system to see that 
  run this `ls /usr/local/lib | grep python`
  
  where is python3.10 to see that `type -a python3.10`
