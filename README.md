@@ -37,7 +37,21 @@ sudo update-alternatives --config python3
 
 ```
 
-# click 0/1/2 to switch the version
+#### click 0/1/2 to switch the version
+
+# To create Virtual Environment to install Django 
+
+##### If you dont have venv then install it `sudo apt install python3-venv`
+
+##### To create environment ` python3 -m venv my_env`
+
+##### Activate the environment `source my_env/bin/activate`
+ 
+##### Install django `python3 -m pip install Django`
+
+##### Install django specifiq version `python3 -m pip install Django==3.2`
+
+##### Create A project `django-admin startproject mysite`
  
 
 
