@@ -34,6 +34,8 @@ and run this command for alternative install `sudo make altinstall`
 sudo update-alternatives --config python3
 
 ```
+
+# click 0/1/2 to switch the version
  
 
 
