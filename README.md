@@ -51,7 +51,7 @@ sudo update-alternatives --config python3
  
 ##### Install django                         `python3 -m pip install Django`
 
-##### Install django specifiq version        `python3 -m pip install Django==3.2`
+##### If you want to install django specifiq version  `python3 -m pip install Django==3.2`
 
 ##### Create A project                       `django-admin startproject mysite`
  
