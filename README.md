@@ -56,6 +56,90 @@ sudo update-alternatives --config python3
 ##### Create A project                       `django-admin startproject mysite`
  
 
+#### To install pipreqs run this command `pip install pipreqs`
 
+`pipreqs` command for requirement.txt
+
+##### Or You can run this command ` pip freeze > requirements.txt`
+
+# To deploy Your Django app in Vercel
+
+##### create `vercel.json` file in root directory of your project paste this line of code
+
+```
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "projectname/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles_build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "projectname/wsgi.py"
+    }
+  ]
+}
+
+```
+#### change projectname your actual projectname
+
+##### create a  file name `build_files.sh`  in root directory of your project paste this line of code
+```
+# build_files.sh
+pip install -r requirements.txt
+python3.9 manage.py collectstatic
+```
+#### In setting.py file of project below STATIC_URL paste this lines of code
+
+##### `import os` in import section
+
+##### ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']
+
+```
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
+
+```
+#### Comment Database setion of setting.py 
+
+```
+DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+}
+```
+
+
+#### In urls.py add this line code
+```
+from django.conf import settings
+from django.conf.urls.static import static
+```
+add this line of code below 
+```
+urlpatterns = [
+###
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+```
 
 
