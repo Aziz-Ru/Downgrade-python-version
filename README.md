@@ -94,9 +94,10 @@ sudo update-alternatives --config python3
     }
   ]
 }
+# change projectname your actual projectname
 
 ```
-#### change projectname your actual projectname
+
 
 ##### create a  file name `build_files.sh`  in root directory of your project paste this line of code
 ```
