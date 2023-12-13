@@ -142,4 +142,26 @@ urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
+# Postgresql Database
+Navigate back to the Postgres shell and run the following commands consecutively.
+sudo -i -u postgres
+
+postgresql database driver
+//pip install psycopg2-binary
+
+create database
+CREATE DATABASE my_db;
+psql
+exit from postgres \q
+
+listing all the databases in the system with the command \l.
+\conninfo to get the information of the connection
+\password postgres
+connect database \c db_name
+delete datatbase \dt
+
+CREATE USER username WITH PASSWORD 'password';
+username : silicon
+postgres pasword aziz121
+
 
