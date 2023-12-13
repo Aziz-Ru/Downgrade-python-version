@@ -162,4 +162,35 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 #### To connect db run `\c db_name`.
 
+# Install postgresql in Django
+
+#### To install postgresql in virstual environment run `pip install psycopg2-binary`.
+
+#### To change requirement.txt file run `pip freeze > requirements.txt`.
+
+#### Now Change in setting.py DATABASE section
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'database_name',
+        'USER': 'user_name_of_psql',
+        'PASSWORD': 'password_pf_psql',
+        'HOST': 'localhost',
+        'PORT': 5432
+    }
+}
+
+```
+
+#### To migrate database run `python3 manage.py migrate`.
+
+#### If You face Error :
+```
+django.db.migrations.exceptions.MigrationSchemaMissing: Unable to create the django_migrations table (permission denied for schema public
+LINE 1: CREATE TABLE "django_migrations"
+```
+#### Go your psql shell and GRANT the the databse to user`GRANT ALL ON DATABASE mydb TO myuser;` and `ALTER DATABASE my_db OWNER TO myuser;`.
+
 
