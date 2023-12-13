@@ -113,7 +113,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
 
 ```
-#### Comment Database setion of setting.py 
+#### If you don't have install postgresql please Comment Database setion of setting.py 
 
 ```
 DATABASES = {
