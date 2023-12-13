@@ -104,6 +104,7 @@ sudo update-alternatives --config python3
 # build_files.sh
 pip install -r requirements.txt
 python3.9 manage.py collectstatic
+#here you must be give python3.9
 ```
 #### In setting.py file of project below STATIC_URL paste this lines of code
 
