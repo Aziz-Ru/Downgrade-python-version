@@ -142,26 +142,24 @@ urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-# Postgresql Database
-Navigate back to the Postgres shell and run the following commands consecutively.
-sudo -i -u postgres
 
-postgresql database driver
-//pip install psycopg2-binary
+# Installed Postgresql Database in ubuntu
+### Just go to the postges website and copy and pase the command to install postgres shell and pgadmin4 .
 
-create database
-CREATE DATABASE my_db;
-psql
-exit from postgres \q
+#### To Show psql version `psql --version`.
 
-listing all the databases in the system with the command \l.
-\conninfo to get the information of the connection
-\password postgres
-connect database \c db_name
-delete datatbase \dt
+#### Navigate back to the Postgres shell and run the following commands consecutively` sudo -i -u postgres`.
 
-CREATE USER username WITH PASSWORD 'password';
-username : silicon
-postgres pasword aziz121
+#### To interact with the database server run ` psql`.
+
+#### To create Database user & password run this ` CREATE USER username WITH PASSWORD 'password';`.
+
+#### To create a database run this `CREATE DATABASE db_name; ` or `createdb db_name `.
+
+#### To delete a database run this `DROP DATABASE db_name;`.
+
+#### To see how many db here `\l`.
+
+#### To connect db run `\c db_name`.
 
 
