@@ -108,9 +108,7 @@ python3.9 manage.py collectstatic
 ```
 #### In setting.py file of project below STATIC_URL paste this lines of code
 
-##### `import os` in import section
-
-##### ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']
+##### `import os` in import section and ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']
 
 ```
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
