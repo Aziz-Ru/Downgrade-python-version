@@ -106,9 +106,7 @@ pip install -r requirements.txt
 python3.9 manage.py collectstatic
 #here you must be give python3.9
 ```
-#### In setting.py file of project below STATIC_URL paste this lines of code
-
-##### `import os` in import section and ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']
+#### In setting.py file of project  `import os` in import section and ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']  below STATIC_URL paste this lines of code
 
 ```
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
