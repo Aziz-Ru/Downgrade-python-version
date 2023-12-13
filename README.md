@@ -158,7 +158,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 #### To delete a database run this `DROP DATABASE db_name;`.
 
-#### To see how many db here `\l`.
+#### To see list of db here `\l`.
 
 #### To connect db run `\c db_name`.
 
